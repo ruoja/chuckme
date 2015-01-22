@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Chuck me!</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <div class="main">
+        <h1>When Chuck Norris tells you a joke...</h1>
+        <h1>...you will listen.</h1>
+        <p class="info">Submit your name for a joke starring yourself,<br>
+            and leave empty for a random Chuck Norris joke.</p>
+        <form action="/" method="post">
+            What's your name? <input type="text" name="name">
+            <input type="submit">
+        </form>
+    </div>   
+    <div class="joke"><%= @joke %></div>
+    <footer class="footer">
+        <p><small>Jokes by <a href="http://www.icndb.com/">Internet Chuck Norris Database</a></small></p>
+    </footer>
+</body>
+</html>
