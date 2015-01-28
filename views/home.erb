@@ -9,15 +9,17 @@
 </head>
 <body>
     <div class="content">
-        <div class="seal"><img alt="Seal of Approval" src="seal.png">
+        <div class="seal"><img alt="Seal of Approval" src="chuck_norris_seal.png">
         </div>
         <div class="main">
             <h1>When Chuck Norris tells you a joke...</h1>
             <h1>...you will listen.</h1>
             <p class="info">Submit your name for a joke starring yourself, and leave empty for a random Chuck Norris joke.</p>
+        </div>
+        <div class="formWrapper">
             <form action="/" method="post">
-                What's your name? <input type="text" name="name">
-                <input type="submit">
+                What's your name? <input type="text" name="name" size="32">
+                <input type="submit" value="Chuck me!">
             </form>
         </div>
         <div class="joke">"<%= @joke %>"</div>

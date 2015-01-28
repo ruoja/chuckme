@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 
 get '/' do
-	@joke = get_joke("http://api.icndb.com/jokes/random")
+	@joke = 'Click the button if you dare.'
 	erb :home
 end
 
@@ -21,7 +21,8 @@ not_found do
 end
 
 def get_joke(url)
-	resp = Net::HTTP.get_response(URI.parse(url))
+	enc_url = URI.escape(url)
+	resp = Net::HTTP.get_response(URI.parse(enc_url))
 	resp_hash = JSON.parse(resp.body)
 	resp_hash["value"]["joke"]
 end
